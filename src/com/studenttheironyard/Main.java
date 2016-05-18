@@ -1,7 +1,5 @@
 package com.studenttheironyard;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
-
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +20,7 @@ public class Main {
         int numInt = Integer.valueOf(num);
 
         if (numInt < 0) {
-            System.out.println("That's a negative number!");
+            System.out.println("That's a negative number");
         }
         else {
             System.out.println("That's a positive number!");
