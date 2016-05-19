@@ -1,5 +1,9 @@
 package com.studenttheironyard;
 
+import java.util.ArrayList;
+
+import static com.studenttheironyard.Main.scanner;
+
 /**
  * Created by hoseasandstrom on 5/18/16.
  */
@@ -7,15 +11,17 @@ public class Player {
     String name;
     String weapon;
     String location;
+    ArrayList<String> items = new ArrayList<>();
+
 
     public void chooseName() {
         System.out.println("What is your name?");
-        String name = Main.scanner.nextLine();
+        name = Main.nextLine();
         System.out.println("Welcome, " + name);
     }
     public void chooseWeapon() throws Exception {
         System.out.println("Choose your weapon [sword/mace]");
-        String weapon = Main.scanner.nextLine();
+        weapon = Main.nextLine();
 
         if (weapon.equalsIgnoreCase("sword")) {
             System.out.println("Sword is a fine choice!");
@@ -29,7 +35,7 @@ public class Player {
     }
     public void chooseLocation() throws Exception {
         System.out.println("Choose your location [forrest/tunnel]");
-        String location = Main.scanner.nextLine();
+        location = Main.nextLine();
 
         if (location.equalsIgnoreCase("forest")){
             System.out.println("Entering forest...");
@@ -41,5 +47,15 @@ public class Player {
             throw new Exception("Invalid location!");
         }
 
+    }
+
+    public void findItem(String item) {
+        System.out.println("You found " + item + "Pick it up? [y/n]?");
+        String answer = scanner.nextLine();
+        if (answer.equalsIgnoreCase("y")) ;
+        {
+            items.add(item);
+            System.out.println("You now have " + items.size() + "items");
+        }
     }
 }
