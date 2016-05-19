@@ -1,29 +1,55 @@
 package com.studenttheironyard;
 
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+
 import java.util.Scanner;
 
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
+    static Player player = new Player();
 
     public static void main(String[] args) throws Exception {
 	    System.out.println("Welcome traveller");
 
-        Player player = new Player();
+
 
         player.chooseName();
         player.chooseWeapon();
         player.chooseLocation();
 
-        System.out.println("Type a number...");
-        String num = scanner.nextLine();
-        int numInt = Integer.valueOf(num);
+        player.findItem("armor");
+        player.findItem("potion");
 
-        if (numInt < 0) {
-            System.out.println("That's a negative number");
         }
+
+//        System.out.println("Type a number...");
+//        String num = scanner.nextLine();
+//        int numInt = Integer.valueOf(num);
+//
+//        if (numInt < 0) {
+//            System.out.println("That's a negative number");
+//        }
+//        else {
+//            System.out.println("That's a positive number!");
+//        }
+
+    public static String nextLine() {
+        String line = scanner.nextLine();
+        while (line.startsWith("/")) {
+            if (line.equals("/inv")) {
+                for (String item : player.items) {
+                    System.out.println(item);
+                }
+                }
+
+
         else {
-            System.out.println("That's a positive number!");
+            System.out.println("Command not found.");
         }
+        line = scanner.nextLine();
+        }
+    return line;
+
     }
 }
