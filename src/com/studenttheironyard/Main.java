@@ -4,6 +4,7 @@ import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 
 import java.util.Scanner;
 
+
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
@@ -11,8 +12,6 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 	    System.out.println("Welcome traveller");
-
-
 
         player.chooseName();
         player.chooseWeapon();
