@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea39652-03ed-4da1-8aee-915df139dd98" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Test/com/studenttheironyard/CharacterTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/studenttheironyard/Enemy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/studenttheironyard/Main.class" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/studenttheironyard/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/studenttheironyard/Player.class" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/studenttheironyard/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TextAdventure.iml" afterPath="$PROJECT_DIR$/TextAdventure.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/studenttheironyard/Main.java" afterPath="$PROJECT_DIR$/src/com/studenttheironyard/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/studenttheironyard/PLayer.java" afterPath="$PROJECT_DIR$/src/com/studenttheironyard/PLayer.java" />
     </list>
     <ignored path="TextAdventure.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -591,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1464104053172</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Inheritance Systems, overide toString, add test for battle method">
+      <created>1464105643111</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1464105643111</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -644,7 +644,8 @@
     <MESSAGE value="Add command system" />
     <MESSAGE value="Inheritance Systems" />
     <MESSAGE value="Inheritance Systems, overide toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inheritance Systems, overide toString" />
+    <MESSAGE value="Inheritance Systems, overide toString, add test for battle method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inheritance Systems, overide toString, add test for battle method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
