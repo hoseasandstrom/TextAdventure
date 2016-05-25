@@ -5,8 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/studenttheironyard/Main.class" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/studenttheironyard/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TextAdventure/com/studenttheironyard/Player.class" afterPath="$PROJECT_DIR$/out/production/TextAdventure/com/studenttheironyard/Player.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/studenttheironyard/Main.java" afterPath="$PROJECT_DIR$/src/com/studenttheironyard/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/studenttheironyard/PLayer.java" afterPath="$PROJECT_DIR$/src/com/studenttheironyard/PLayer.java" />
     </list>
     <ignored path="TextAdventure.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -624,7 +622,14 @@
       <option name="project" value="LOCAL" />
       <updated>1464188753769</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add io json features">
+      <created>1464189895469</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1464189895469</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -678,7 +683,8 @@
     <MESSAGE value="Inheritance Systems" />
     <MESSAGE value="Inheritance Systems, overide toString" />
     <MESSAGE value="Inheritance Systems, overide toString, add test for battle method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inheritance Systems, overide toString, add test for battle method" />
+    <MESSAGE value="Add io json features" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add io json features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
