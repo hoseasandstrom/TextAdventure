@@ -36,4 +36,16 @@ public class Character {
                 ", damage=" + damage +
                 '}';
     }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

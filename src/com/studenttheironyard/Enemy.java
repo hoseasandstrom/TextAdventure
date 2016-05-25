@@ -9,4 +9,6 @@ public class Enemy extends Character {
         this.health = health;
         this.damage = damage;
     }
+
+
 }
