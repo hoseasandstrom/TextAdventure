@@ -10,7 +10,6 @@ import static com.studenttheironyard.Main.scanner;
 public class Player extends Character {
     String weapon;
     String location;
-
     ArrayList<String> items = new ArrayList<>();
 
     public Player() {
@@ -42,7 +41,7 @@ public class Player extends Character {
         System.out.println("Choose your location [forrest/tunnel]");
         location = Main.nextLine();
 
-        if (location.equalsIgnoreCase("forest")){
+        if (location.equalsIgnoreCase("forrest")){
             System.out.println("Entering forest...");
         }
         else if (location.equalsIgnoreCase("tunnel")) {
@@ -62,5 +61,17 @@ public class Player extends Character {
             items.add(item);
             System.out.printf("You now have %s items\n ", items.size());
         }
+    }
+
+    public String getWeapon() {
+        return weapon;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public ArrayList<String> getItems() {
+        return items;
     }
 }

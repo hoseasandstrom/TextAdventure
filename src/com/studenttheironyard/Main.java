@@ -1,9 +1,10 @@
 package com.studenttheironyard;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+import jodd.json.JsonParser;
 import jodd.json.JsonSerializer;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -11,19 +12,27 @@ import java.util.Scanner;
 
 public class Main {
 
+    static final String SAVE_FILE = "game.json";
     static Scanner scanner = new Scanner(System.in);
     static Player player = new Player();
 
     public static void main(String[] args) throws Exception {
-	    System.out.println("Welcome traveller");
+        player = loadGame();
+        if (player == null) {
+            player = new Player();
+            System.out.println("Starting new game.");
+        }
 
-        player.chooseName();
-        player.chooseWeapon();
-        player.chooseLocation();
+        System.out.println("Welcome traveller");
 
-        player.findItem("armor");
-        player.findItem("potion");
+        if (player.name == null) player.chooseName();
+        if (player.weapon == null) player.chooseWeapon();
+        if (player.location == null) player.chooseLocation();
 
+        if (player.items.isEmpty()) {
+            player.findItem("armor");
+            player.findItem("potion");
+        }
         Enemy ogre = new Enemy("Ogre", 10, 10);
         player.battle(ogre);
 
@@ -31,7 +40,7 @@ public class Main {
         System.out.println(ogre);
 
 
-        }
+    }
 
 //        System.out.println("Type a number...");
 //        String num = scanner.nextLine();
@@ -51,17 +60,15 @@ public class Main {
                 for (String item : player.items) {
                     System.out.println(item);
                 }
-            }
-            else if (line.equals("/save")) {
+            } else if (line.equals("/save")) {
                 saveGame();
+            } else {
+                System.out.println("Command not found.");
             }
-            else {
-            System.out.println("Command not found.");
-        }
-        line = scanner.nextLine();
+            line = scanner.nextLine();
         }
 
-    return line;
+        return line;
 
     }
 
@@ -69,7 +76,7 @@ public class Main {
         JsonSerializer serializer = new JsonSerializer();
         String json = serializer.include("*").serialize(player);
 
-        File f = new File("game.json");
+        File f = new File(SAVE_FILE);
         try {
             FileWriter fw = new FileWriter(f);
             fw.write(json);
@@ -77,5 +84,20 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+    }
+
+    public static Player loadGame() throws FileNotFoundException {
+        File f = new File(SAVE_FILE);
+        try {
+            Scanner scanner = new Scanner(f);
+            scanner.useDelimiter("\\Z");
+            String contents = scanner.next();
+            JsonParser parser = new JsonParser();
+            return parser.parse(contents, Player.class);
+        } catch (FileNotFoundException e) {
+        }
+        return null;
     }
 }
